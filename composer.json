@@ -1,5 +1,5 @@
 {
-    "name": "polliedev/queue_monitor",
+    "name": "polliedev/queue-monitor",
     "description": "Laravel Queue monitoring tool to keep track of which jobs are running, failed or succeeded.",
     "homepage": "https://github.com/polliedev/queue_monitor",
     "license": "MIT",
