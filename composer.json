@@ -1,0 +1,55 @@
+{
+    "name": "polliedev/queue_monitor",
+    "description": "Laravel Queue monitoring tool to keep track of which jobs are running, failed or succeeded.",
+    "homepage": "https://github.com/polliedev/queue_monitor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PollieDev",
+            "email": "hello@pollie.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "inertiajs/inertia-laravel": "^0.6.9",
+        "laravel/framework": "^7.0|^8.0|^9.0|^10.0",
+        "nunomaduro/laravel-console-task": "^1.6",
+        "sixlive/dotenv-editor": "^1.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4",
+        "nunomaduro/collision": "^5.3",
+        "orchestra/testbench": "^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0",
+        "spatie/laravel-ray": "^1.18",
+        "vimeo/psalm": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "QueueMonitor\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "QueueMonitor\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QueueMonitor\\QueueMonitorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
